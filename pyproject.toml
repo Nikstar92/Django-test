@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "django-test"
+version = "0.1.0"
+description = ""
+authors = ["Nikita <Nikita.yavkin92@gmail.com>"]
+readme = "README.md"
+packages = [{include = "django_test"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^4.1.6"
+views = "^0.3"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
