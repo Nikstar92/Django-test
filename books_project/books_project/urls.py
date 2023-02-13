@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, re_path, include
-from books import views
+from books_app import views
 
 
 product_patterns = [
