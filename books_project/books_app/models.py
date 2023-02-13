@@ -5,7 +5,10 @@ class Book(models.Model):
     book_author = models.CharField('Автор книги', max_length=50)
     book_title = models.CharField('Название книги', max_length=50)
     book_content = models.TextField('Содержание')
-    pub_date = models.DateTimeField('Год издания')
+    pub_date = models.CharField('Год издания', max_length=15)
+
+    def __str__(self):
+        return self.book_author, self.book_title
 
 
 class Comment(models.Model):
@@ -13,3 +16,6 @@ class Comment(models.Model):
     comment = models.ForeignKey(Book, on_delete=models.CASCADE)
     author_name = models.CharField('Имя автора', max_length=50)
     comment_text = models.CharField('Текст комментария', max_length=200)
+
+    def __str__(self):
+        return self.author_name
