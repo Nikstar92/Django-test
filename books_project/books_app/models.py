@@ -7,8 +7,8 @@ class Book(models.Model):
     book_content = models.TextField('Содержание')
     pub_date = models.CharField('Год издания', max_length=15)
 
-    def __str__(self):
-        return self.book_author, self.book_title
+    # def __str__(self):
+    #     return self.book_author, self.book_title
 
 
 class Comment(models.Model):
@@ -17,5 +17,5 @@ class Comment(models.Model):
     author_name = models.CharField('Имя автора', max_length=50)
     comment_text = models.CharField('Текст комментария', max_length=200)
 
-    def __str__(self):
-        return self.author_name
+    # def __str__(self):
+    #     return self.author_name
