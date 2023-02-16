@@ -17,7 +17,6 @@ from django.contrib import admin
 from django.urls import path, re_path, include
 from books_app import views
 
-
 product_patterns = [
     path("", views.products),
     path("top", views.top),
@@ -29,10 +28,9 @@ about_patterns = [
     path("contact", views.contact),
 ]
 
-urlpatterns = {
+urlpatterns = [
     re_path(r"^about/", include(about_patterns)),
     re_path(r"^products/", include(product_patterns)),
     path('', views.index),
     path('admin/', admin.site.urls),
-
-}
+]

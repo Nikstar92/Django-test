@@ -10,6 +10,9 @@ class Book(models.Model):
     # def __str__(self):
     #     return self.book_author, self.book_title
 
+    class Meta:
+        verbose_name = "Книга"
+        verbose_name_plural = "Книги"
 
 class Comment(models.Model):
     # привязка комментарий к книге и удаления всех комментарий, если книгу удалить
@@ -19,3 +22,7 @@ class Comment(models.Model):
 
     # def __str__(self):
     #     return self.author_name
+
+    class Meta:
+        verbose_name = "Комментарий"
+        verbose_name_plural = "Комментарии"
