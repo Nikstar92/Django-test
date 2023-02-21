@@ -4,21 +4,22 @@ from django.shortcuts import render
 from django.template.response import TemplateResponse
 
 
-def index(request):
-    return TemplateResponse(request, "books_app/index.html")
+# def index(request):
+#     return TemplateResponse(request, "books_app/index.html")
 
 # def index(request):
 #     template = loader.get_template('books_app/index.html')
 #     return HttpResponse(template.render(), charset='utf-8')
-# def index(request):
-#     return render(request, "books_app/index.html")
+def index(request):
+    return render(request, "books_app/index.html")
+
 
 def about(request):
-    return HttpResponse("<h2>О сайте</h2>", charset='utf-8')
+    return render(request, "books_app/about.html")
 
 
-def contact(request):
-    return HttpResponse("<h2>Контакты</h2>", charset='utf-8')
+def contacts(request):
+    return render(request, 'books_app/contacts.html')
 
 
 def products(request):
