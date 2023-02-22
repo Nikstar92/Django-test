@@ -25,12 +25,12 @@ product_patterns = [
 
 about_patterns = [
     path("", views.about),
-    path("contacts", views.contacts),
+    path("contacts/", views.contacts),
 ]
 
 urlpatterns = [
     path("about/", include(about_patterns)),
     path("products/", include(product_patterns)),
-    path('', views.index),
+    path('index/', views.index),
     path('admin/', admin.site.urls),
 ]
