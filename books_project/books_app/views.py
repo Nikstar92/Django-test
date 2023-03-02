@@ -23,8 +23,8 @@ def contacts(request):
 
 
 def products(request):
-    return HttpResponse("<h2>Список товаров</h2>", charset='utf-8')
+    return render(request, 'books_app/products.html')
 
 
 def top(request):
-    return HttpResponse("<h2>Наиболее популярные товары</h2>", charset='utf-8')
+    return render(request, 'books_app/top.html')

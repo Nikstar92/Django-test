@@ -7,7 +7,13 @@
     <title>{% block title %}Default title{% endblock title %}</title>
 </head>
 <body>
-    <div><a href="/index/">Главная</a> | <a href="/about/contacts/">Контакты</a> | <a href="/about/">О компании</a></div>
+    {% block sidebar %}
+        <a href="/index/">Главная</a>
+        <a href="/about/">О компании</a>
+        <a href="/about/contacts/">Контакты</a>
+        <a href="{% url "products_list" %}">Книги</a>
+        <a href="{% url "products_top" %}">Выбор покупателей</a>
+    {% endblock %}
     <h1>{% block header %}{% endblock header %}</h1>
     <div>{% block content%}{% endblock content %}</div>
 </body>

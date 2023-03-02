@@ -18,8 +18,8 @@ from django.urls import path, include
 from books_app import views
 
 product_patterns = [
-    path("", views.products),
-    path("top", views.top),
+    path("", views.products, name="products_list"),
+    path("top", views.top, name='products_top'),
 
 ]
 
