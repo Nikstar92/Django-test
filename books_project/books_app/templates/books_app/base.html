@@ -8,9 +8,9 @@
 </head>
 <body>
     {% block sidebar %}
-        <a href="/index/">Главная</a>
-        <a href="/about/">О компании</a>
-        <a href="/about/contacts/">Контакты</a>
+        <a href="{% url "index" %}">Главная</a>
+        <a href="{% url "about" %}">О компании</a>
+        <a href="{% url "about_contacts" %}">Контакты</a>
         <a href="{% url "products_list" %}">Книги</a>
         <a href="{% url "products_top" %}">Выбор покупателей</a>
     {% endblock %}
